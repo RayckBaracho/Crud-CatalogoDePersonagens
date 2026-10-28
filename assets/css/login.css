@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    background-color: #0866d9;
+    z-index: -1;
+}
+
+body::before {
+    width: 300px;
+    height: 220px;
+    top: -90px;
+    left: -100px;
+    border-radius: 40% 60% 55% 45%;
+    transform: rotate(25deg);
+}
+
+body::after {
+    width: 250px;
+    height: 200px;
+    right: -90px;
+    bottom: -70px;
+    border-radius: 35% 65% 45% 55%;
+    transform: rotate(-25deg);
+}
+
+
+.container-login {
+    background-color: #fff;
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+.container-login h1 {
+    color: #243b53;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+
+.descricao {
+    color: #777;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formulario label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+    margin-top: 10px;
+}
+
+
+.formulario input {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.20);
+    background-color: #fafafa;
+    font-size: 15px;
+    outline: none;
+    transition: background-color 0.3s;
+    
+}
+
+.formulario input:focus {
+    border-bottom-color: #0866d9;
+}
+
+
+.formulario button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 25px;
+    background-color: #0866d9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formulario button:hover {
+    background-color: #0753b5;
+}
+
+.voltar {
+    display: block;
+    text-align: center;
+    margin-top: 22px;
+    color: #0866d9;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.voltar:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 600px) {
+    body {
+        padding: 18px;
+    }
+
+    .container-cadastro {
+        padding: 28px 22px;
+    }
+
+    .container-cadastro h1 {
+        font-size: 24px;
+    }
+}

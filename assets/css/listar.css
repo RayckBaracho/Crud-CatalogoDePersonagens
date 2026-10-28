@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    padding: 25px 20px;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #243b53;
+}
+
+
+h1 {
+    max-width: 1150px;
+    margin: 0 auto 8px;
+    font-size: 24px;
+    text-align: center;
+}
+
+
+.descricao {
+    max-width: 1150px;
+    margin: 0 auto 20px;
+    text-align: center;
+    color: #7b8794;
+    font-size: 13px;
+}
+
+
+.botao-cadastrar {
+    display: block;
+    width: fit-content;
+    padding: 9px 14px;
+    margin: 0 auto 18px;
+    background: #0866d9;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: background 0.2s;
+}
+
+.botao-cadastrar:hover {
+    background: #0753b5;
+}
+
+
+.lista-personagens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+
+.personagem {
+    display: grid;
+    grid-template-columns: 60px 1.2fr 1.2fr 1.5fr auto;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 72px;
+    padding: 12px 24px;
+    background: #fff;
+    border: 1px solid #e5eaf0;
+    border-radius: 6px;
+}
+
+
+.personagem h2 {
+    min-width: 0;
+    margin: 0;
+    color: #0866d9;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.personagem p {
+    min-width: 0;
+    margin: 0;
+    font-size: 13px;
+    color: #526171;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.personagem strong {
+    color: #243b53;
+}
+
+
+.personagem form {
+    margin: 0;
+    justify-self: end;
+}
+
+
+.botao-excluir {
+    padding: 7px 12px;
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.botao-excluir:hover {
+    background: #b02a37;
+}
+
+
+.lista-vazia {
+    text-align: center;
+    color: #7b8794;
+    font-size: 13px;
+}
+
+
+@media (max-width: 600px) {
+    body {
+        padding: 18px 12px;
+    }
+
+    h1 {
+        font-size: 21px;
+    }
+
+    .lista-personagens {
+        max-width: 100%;
+    }
+
+    .personagem {
+        grid-template-columns: 35px 1fr 1fr 1.2fr auto;
+        gap: 7px;
+        min-height: 65px;
+        padding: 10px;
+    }
+
+    .personagem h2,
+    .personagem p {
+        font-size: 11px;
+    }
+
+    .botao-excluir {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+}
